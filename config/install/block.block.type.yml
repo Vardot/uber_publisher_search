@@ -8,12 +8,12 @@ dependencies:
     - facets
     - system
   theme:
-    - uber_publisher_vanilla
+    - vartheme
 third_party_settings:
   block_class:
     classes: ''
 id: type
-theme: uber_publisher_vanilla
+theme: vartheme
 region: content
 weight: -9
 provider: null

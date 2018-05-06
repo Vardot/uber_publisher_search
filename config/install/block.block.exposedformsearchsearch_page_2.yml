@@ -8,12 +8,12 @@ dependencies:
     - system
     - views
   theme:
-    - uber_publisher_vanilla
+    - vartheme
 third_party_settings:
   block_class:
     classes: ''
 id: exposedformsearchsearch_page_2
-theme: uber_publisher_vanilla
+theme: vartheme
 region: content
 weight: -11
 provider: null
