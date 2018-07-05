@@ -6,7 +6,7 @@ dependencies:
     - field.storage.node.field_image
     - field.storage.node.field_image_file
     - field.storage.node.field_images
-    - responsive_image.styles.d6_standard
+    - responsive_image.styles.d06_standard
     - search_api.index.uber_publisher_default_index
   module:
     - better_exposed_filters
@@ -241,7 +241,7 @@ display:
           click_sort_column: target_id
           type: entity_reference_entity_view
           settings:
-            view_mode: s6_standard
+            view_mode: s06_standard
           group_column: target_id
           group_columns: {  }
           group_rows: true
@@ -321,7 +321,7 @@ display:
           click_sort_column: target_id
           type: responsive_image
           settings:
-            responsive_image_style: d6_standard
+            responsive_image_style: d06_standard
             image_link: content
           group_column: ''
           group_columns: {  }
@@ -392,7 +392,7 @@ display:
           click_sort_column: target_id
           type: entity_reference_entity_view
           settings:
-            view_mode: s6_standard
+            view_mode: s06_standard
           group_column: target_id
           group_columns: {  }
           group_rows: true
