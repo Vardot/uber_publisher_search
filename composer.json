@@ -30,7 +30,8 @@
     "composer/installers": "^1.5.0",
     "oomphinc/composer-installers-extender": "^1.1.2",
     "cweagans/composer-patches": "^1.6.4",
-    "drupal/drupal-library-installer-plugin": "^0.3"
+    "drupal/drupal-library-installer-plugin": "^0.3",
+    "drupal/facets": "1.1"
   },
   "extra": {
     "branch-alias": {
@@ -41,6 +42,12 @@
       "npm-asset"
     ],
     "enable-patching": true,
-    "composer-exit-on-patch-failure": true
+    "composer-exit-on-patch-failure": true,
+    "patches": {
+      "drupal/facets": {
+        "Issue #2692027: Have All link in facets":
+        "https://www.drupal.org/files/issues/2018-06-09/2692027-78.patch"
+      }
+    }
   }
 }
