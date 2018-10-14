@@ -12,5 +12,5 @@ dependencies:
   - uber_publisher_core:uber_publisher_core
   - better_exposed_filters:better_exposed_filters
   - search_api:search_api
-  - search_api_db:search_api_db
+  - search_api:search_api_db
   - facets:facets
