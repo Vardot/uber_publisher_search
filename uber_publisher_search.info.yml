@@ -3,20 +3,7 @@ description: 'Uber publisher search system.'
 type: module
 core: 8.x
 dependencies:
-  - better_exposed_filters
-  - block
-  - block_class
-  - datetime
-  - facets
-  - node
-  - responsive_image
-  - search_api
-  - search_api_db
-  - system
-  - uber_publisher_core
-  - varbase_core
-  - varbase_landing
-  - varbase_media
-  - views
+  - varbase_search
+  - search_api_autocomplete
 version: 8.x-6.x-dev
 package: 'Uber Publisher'

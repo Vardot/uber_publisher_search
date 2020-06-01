@@ -2,16 +2,11 @@ langcode: en
 status: true
 dependencies:
   config:
-    - field.storage.node.field_date
     - field.storage.node.field_image
-    - field.storage.node.field_image_file
     - field.storage.node.field_images
-    - responsive_image.styles.d06_standard
     - search_api.index.uber_publisher_default_index
   module:
     - better_exposed_filters
-    - datetime
-    - responsive_image
     - search_api
 id: search
 label: Search
@@ -20,7 +15,6 @@ description: ''
 tag: ''
 base_table: search_api_index_uber_publisher_default_index
 base_field: search_api_id
-core: 8.x
 display:
   default:
     display_plugin: default
@@ -180,7 +174,7 @@ display:
             decimal: .
             separator: ','
             format_plural: false
-            format_plural_string: "1\x03@count"
+            format_plural_string: !!binary MQNAY291bnQ=
             prefix: ''
             suffix: ''
             link_to_item: false
@@ -268,77 +262,6 @@ display:
               video:
                 display_method: label
                 view_mode: default
-          entity_type: node
-          plugin_id: search_api_field
-        field_image_file:
-          id: field_image_file
-          table: search_api_datasource_uber_publisher_default_index_entity_node
-          field: field_image_file
-          relationship: none
-          group_type: group
-          admin_label: ''
-          label: ''
-          exclude: true
-          alter:
-            alter_text: false
-            text: ''
-            make_link: false
-            path: ''
-            absolute: false
-            external: false
-            replace_spaces: false
-            path_case: none
-            trim_whitespace: false
-            alt: ''
-            rel: ''
-            link_class: ''
-            prefix: ''
-            suffix: ''
-            target: ''
-            nl2br: false
-            max_length: 0
-            word_boundary: true
-            ellipsis: true
-            more_link: false
-            more_link_text: ''
-            more_link_path: ''
-            strip_tags: false
-            trim: false
-            preserve_tags: ''
-            html: false
-          element_type: div
-          element_class: image
-          element_label_type: '0'
-          element_label_class: ''
-          element_label_colon: false
-          element_wrapper_type: '0'
-          element_wrapper_class: ''
-          element_default_classes: true
-          empty: ''
-          hide_empty: false
-          empty_zero: false
-          hide_alter_empty: true
-          click_sort_column: target_id
-          type: responsive_image
-          settings:
-            responsive_image_style: d06_standard
-            image_link: content
-          group_column: ''
-          group_columns: {  }
-          group_rows: true
-          delta_limit: 0
-          delta_offset: 0
-          delta_reversed: false
-          delta_first_last: false
-          multi_type: separator
-          separator: ', '
-          field_api_classes: false
-          field_rendering: true
-          fallback_handler: search_api
-          fallback_options:
-            link_to_item: false
-            multi_type: separator
-            multi_separator: ', '
           entity_type: node
           plugin_id: search_api_field
         field_images:
@@ -565,77 +488,6 @@ display:
             multi_type: separator
             multi_separator: ', '
           plugin_id: search_api_field
-        field_date:
-          id: field_date
-          table: search_api_datasource_uber_publisher_default_index_entity_node
-          field: field_date
-          relationship: none
-          group_type: group
-          admin_label: ''
-          label: ''
-          exclude: false
-          alter:
-            alter_text: false
-            text: ''
-            make_link: false
-            path: ''
-            absolute: false
-            external: false
-            replace_spaces: false
-            path_case: none
-            trim_whitespace: false
-            alt: ''
-            rel: ''
-            link_class: ''
-            prefix: ''
-            suffix: ''
-            target: ''
-            nl2br: false
-            max_length: 0
-            word_boundary: true
-            ellipsis: true
-            more_link: false
-            more_link_text: ''
-            more_link_path: ''
-            strip_tags: false
-            trim: false
-            preserve_tags: ''
-            html: false
-          element_type: span
-          element_class: date
-          element_label_type: '0'
-          element_label_class: ''
-          element_label_colon: false
-          element_wrapper_type: '0'
-          element_wrapper_class: ''
-          element_default_classes: true
-          empty: '{{ created }}'
-          hide_empty: false
-          empty_zero: false
-          hide_alter_empty: true
-          click_sort_column: value
-          type: datetime_default
-          settings:
-            timezone_override: ''
-            format_type: html_date
-          group_column: value
-          group_columns: {  }
-          group_rows: true
-          delta_limit: 0
-          delta_offset: 0
-          delta_reversed: false
-          delta_first_last: false
-          multi_type: separator
-          separator: ', '
-          field_api_classes: false
-          field_rendering: true
-          fallback_handler: search_api
-          fallback_options:
-            link_to_item: false
-            multi_type: separator
-            multi_separator: ', '
-          entity_type: node
-          plugin_id: search_api_field
         type:
           id: type
           table: search_api_index_uber_publisher_default_index
@@ -784,6 +636,8 @@ display:
             multiple: false
             remember_roles:
               authenticated: authenticated
+            operator_limit_selection: false
+            operator_list: {  }
           is_grouped: false
           group_info:
             label: ''
@@ -827,6 +681,8 @@ display:
               site_admin: '0'
               administrator: '0'
               opinion_writer: '0'
+            operator_limit_selection: false
+            operator_list: {  }
           is_grouped: false
           group_info:
             label: ''
@@ -901,11 +757,11 @@ display:
         - url.query_args
         - 'url.query_args:sort_by'
         - 'url.query_args:sort_order'
+        - 'user.node_grants:view'
       tags:
-        - 'config:field.storage.node.field_date'
         - 'config:field.storage.node.field_image'
-        - 'config:field.storage.node.field_image_file'
         - 'config:field.storage.node.field_images'
+        - 'config:search_api.index.uber_publisher_default_index'
   search_page:
     display_plugin: page
     id: search_page
@@ -929,8 +785,8 @@ display:
         - url.query_args
         - 'url.query_args:sort_by'
         - 'url.query_args:sort_order'
+        - 'user.node_grants:view'
       tags:
-        - 'config:field.storage.node.field_date'
         - 'config:field.storage.node.field_image'
-        - 'config:field.storage.node.field_image_file'
         - 'config:field.storage.node.field_images'
+        - 'config:search_api.index.uber_publisher_default_index'
