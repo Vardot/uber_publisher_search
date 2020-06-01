@@ -4,16 +4,12 @@ dependencies:
   config:
     - views.view.search
   module:
-    - block_class
     - system
     - views
   theme:
-    - vartheme
-third_party_settings:
-  block_class:
-    classes: ''
-id: exposedformsearchsearch_page_2
-theme: vartheme
+    - uber_publisher_bs4
+id: uber_publisher_bs4_exposedformsearchsearch_page_2
+theme: uber_publisher_bs4
 region: content
 weight: -11
 provider: null
