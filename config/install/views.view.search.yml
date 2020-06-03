@@ -8,6 +8,7 @@ dependencies:
   module:
     - better_exposed_filters
     - search_api
+    - user
 id: search
 label: Search
 module: views
@@ -23,8 +24,9 @@ display:
     position: 0
     display_options:
       access:
-        type: none
-        options: {  }
+        type: perm
+        options:
+          perm: 'access content'
       cache:
         type: tag
         options: {  }
@@ -668,6 +670,8 @@ display:
             description: ''
             use_operator: false
             operator: search_api_fulltext_op
+            operator_limit_selection: false
+            operator_list: {  }
             identifier: keywords
             required: false
             remember: false
@@ -676,13 +680,13 @@ display:
               authenticated: authenticated
               anonymous: '0'
               editor: '0'
+              editor2: '0'
               content_admin: '0'
               seo_admin: '0'
               site_admin: '0'
               administrator: '0'
               opinion_writer: '0'
-            operator_limit_selection: false
-            operator_list: {  }
+            placeholder: keyword
           is_grouped: false
           group_info:
             label: ''
@@ -758,6 +762,7 @@ display:
         - 'url.query_args:sort_by'
         - 'url.query_args:sort_order'
         - 'user.node_grants:view'
+        - user.permissions
       tags:
         - 'config:field.storage.node.field_image'
         - 'config:field.storage.node.field_images'
@@ -786,6 +791,7 @@ display:
         - 'url.query_args:sort_by'
         - 'url.query_args:sort_order'
         - 'user.node_grants:view'
+        - user.permissions
       tags:
         - 'config:field.storage.node.field_image'
         - 'config:field.storage.node.field_images'
