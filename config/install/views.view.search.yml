@@ -94,16 +94,23 @@ display:
       style:
         type: default
         options:
-          grouping: {  }
-          row_class: row
+          row_class: 'row mb-3'
           default_row_class: true
+          uses_fields: false
       row:
-        type: fields
+        type: search_api
         options:
-          default_field_elements: true
-          inline: {  }
-          separator: ''
-          hide_empty: false
+          view_modes:
+            'entity:node':
+              article: search_result
+              author_profile: search_result
+              in_depth: search_result
+              in_pictures: search_result
+              landing_page: search_result
+              landing_page_lb: search_result
+              opinion_article: search_result
+              page: search_result
+              video: search_result
       fields:
         nid:
           id: nid
