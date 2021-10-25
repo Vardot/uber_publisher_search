@@ -1,9 +1,9 @@
 name: 'Uber Publisher Search'
 description: 'Uber publisher search system.'
 type: module
-dependencies:
-  - varbase_search
-  - search_api_autocomplete
-  - facets
 package: 'Uber Publisher'
 core_version_requirement: ^8 || ^9
+dependencies:
+  - varbase_search:varbase_search
+  - search_api_autocomplete:search_api_autocomplete
+  - facets:facets
