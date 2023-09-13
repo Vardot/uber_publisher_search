@@ -2,7 +2,7 @@ name: 'Uber Publisher Search'
 description: 'Uber publisher search system.'
 type: module
 package: 'Uber Publisher'
-core_version_requirement: ^9
+core_version_requirement: ~9.5.0 || ~10.1.0
 dependencies:
   - varbase_search:varbase_search
   - search_api_autocomplete:search_api_autocomplete
