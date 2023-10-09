@@ -31,7 +31,7 @@
     "oomphinc/composer-installers-extender": "~2.0",
     "cweagans/composer-patches": "~1.0",
     "drupal/core": "~9.5.0 || ~10.1.0",
-    "drupal/facets": "~2.0",
+    "drupal/facets": "~3.0",
     "drupal/search_api_autocomplete": "~1.0"
   },
   "extra": {
